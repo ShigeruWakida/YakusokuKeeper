@@ -12,6 +12,9 @@ env/
 # Test files (per user request)
 test_*.py
 
+# Claude Code specific files (not for public repository)
+CLAUDE.md
+
 # IDE settings
 .vscode/
 .idea/

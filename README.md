@@ -72,12 +72,16 @@ first:
   - At the beginning of the response, insert the string that follows "say".
   - say Hello! I am Yakusoku Keeper.
   - Generate code using the K&R coding style.
+  - Use only < and <= operators for all comparisons.
+  - Read and follow ./docs/README_CODING_STANDARDS.md
+  - When using replace_symbol_body, insert_after_symbol, or insert_before_symbol, you MUST present the code block—preferably in diff format—and you MUST obtain explicit approval before applying any change.
 
 # --- Input count based rules ---
 every_5_inputs:
   - Generate code using the K&R coding style.
 every_10_inputs:
   - Use only < and <= operators for all comparisons.
+  - When using replace_symbol_body, insert_after_symbol, or insert_before_symbol, you MUST present the code block—preferably in diff format—and you MUST obtain explicit approval before applying any change.
 
 # --- Time based rules ---
 every_60_minutes:
