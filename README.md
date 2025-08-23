@@ -122,7 +122,6 @@ remove_rule("first", "Always be polite and helpful")
 ```
 YakusokuKeeper/
 ├── yakusoku_keeper.py    # Main MCP server
-├── CLAUDE.md           # Claude Code guidance
 ├── README.md           # This file
 ├── requirements.txt    # Dependencies
 ├── LICENSE            # MIT License
