@@ -34,7 +34,13 @@ python yakusoku_keeper.py
 
 ### Claude Code Configuration
 
-Add this to your Claude Code MCP settings:
+Add the server using the Claude Code CLI:
+
+```bash
+claude mcp add yakusoku_keeper --scope project -- python /path/to/YakusokuKeeper/yakusoku_keeper.py
+```
+
+Or manually add this to your Claude Code MCP settings:
 
 ```json
 {
