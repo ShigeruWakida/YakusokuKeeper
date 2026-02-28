@@ -142,6 +142,46 @@ YakusokuKeeper/
 - **Break Reminders**: Suggest breaks during long coding sessions
 - **Greeting Messages**: Consistent welcome messages for new sessions
 
+## Combo: YakusokuKeeper + mcp-win-toast
+
+[mcp-win-toast](https://github.com/ShigeruWakida/mcp-win-toast) is an MCP server that lets AI assistants send Windows toast notifications and dialog boxes. By combining it with YakusokuKeeper, you can build a **self-managing AI assistant** that notifies you at the right moments — automatically, without being asked.
+
+### Break Reminder
+
+Add a time-based rule to remind you to take a break every 30 minutes, delivered as a toast notification.
+
+```yaml
+every_30_minutes:
+  - "Call show_toast with title 'Break Time' and message 'You have been working for 30 minutes. Stand up and stretch!'"
+```
+
+### Progress Report at Regular Intervals
+
+Have Claude automatically summarize what it has done every 10 interactions and notify you.
+
+```yaml
+every_10_inputs:
+  - "Summarize what you have accomplished so far in 2-3 bullet points, then call show_toast with title 'Progress Report' and the summary as the message."
+```
+
+### Critical File Protection
+
+Show a blocking dialog for confirmation whenever Claude is about to modify important files.
+
+```yaml
+first:
+  - "Before editing any file matching *.env, *.config, or docker-compose.*, always call show_dialog with title 'Confirm Edit' and a message describing which file you are about to modify. Wait for the user to acknowledge before proceeding."
+```
+
+### Session Duration Warning
+
+Warn the user with a dialog box after a long session so they can decide whether to continue.
+
+```yaml
+every_60_minutes:
+  - "Call show_dialog with title 'Long Session' and message 'You have been working for over an hour. Would you like to wrap up or continue?' to check in with the user."
+```
+
 ## Contributing
 
 1. Fork the repository
